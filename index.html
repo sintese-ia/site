@@ -179,6 +179,15 @@
   footer.foot .fine { font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
 </style>
 
+<style>
+/* ===== FUNDO SHADER: MeshGradient (paper-design/shaders) em paleta Síntese ===== */
+#shader-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+#shader-bg > div, #shader-bg canvas { width: 100% !important; height: 100% !important; }
+body > .wrap { position: relative; z-index: 1; }
+</style>
+<div id="shader-bg" aria-hidden="true"></div>
+
+
 <div class="wrap">
 
 <nav class="top">
@@ -290,6 +299,28 @@
 </footer>
 
 </div>
+
+<script type="module">
+/* MeshGradient fluido em toda a pagina — mesma lib da referencia (paper-design), paleta da marca */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  try {
+    const [{ default: React }, { createRoot }, { MeshGradient }] = await Promise.all([
+      import('https://esm.sh/react@18.3.1'),
+      import('https://esm.sh/react-dom@18.3.1/client'),
+      import('https://esm.sh/@paper-design/shaders-react@0.0.78?deps=react@18.3.1')
+    ]);
+    const host = document.getElementById('shader-bg');
+    createRoot(host).render(React.createElement(MeshGradient, {
+      colors: ['#F7F2E8', '#F1E8D6', '#E9E9DF', '#D9E0F2', '#EDE4CF'],
+      speed: 0.35,
+      distortion: 0.7,
+      swirl: 0.4,
+      style: { width: '100%', height: '100%' }
+    }));
+  } catch (e) { /* sem shader, fica o papel liso */ }
+}
+</script>
+
 
 </body>
 </html>
