@@ -180,6 +180,13 @@
 </style>
 
 <style>
+/* ============ CAMPO DE SÍNTESE — assinatura scroll-driven ============ */
+#synth-field { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+body > .wrap { position: relative; z-index: 1; }
+</style>
+
+
+<style>
 /* ============ MOTION: "síntese em movimento" ============ */
 @media (prefers-reduced-motion: no-preference) {
   /* entrada do hero — sequência orquestrada */
@@ -405,6 +412,86 @@ document.documentElement.classList.add('js');
       io2.observe(band);
     }
   }
+})();
+</script>
+
+
+<script>
+/* CAMPO DE SÍNTESE: acentos ´ espalhados em caos que se alinham conforme o scroll.
+   A tese da marca — acúmulo → síntese — animada. */
+(function(){
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canvas = document.createElement('canvas');
+  canvas.id = 'synth-field';
+  document.body.prepend(canvas);
+  var ctx = canvas.getContext('2d');
+  var marks = [], W, H, dpr;
+  var COBALT = '29,79,196', INK = '29,29,29';
+
+  function build(){
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineCap = 'round';
+    marks = [];
+    var gap = W < 700 ? 92 : 76;
+    var cols = Math.ceil(W / gap), rows = Math.ceil(H / gap);
+    for (var r = 0; r <= rows; r++) {
+      for (var c = 0; c <= cols; c++) {
+        var gx = c * gap + gap/2, gy = r * gap + gap/2;
+        marks.push({
+          gx: gx, gy: gy,
+          sx: gx + (Math.random() - .5) * 260,
+          sy: gy + (Math.random() - .5) * 260,
+          rot0: Math.random() * Math.PI * 2,
+          len: 9 + Math.random() * 6,
+          d: Math.random(),                       // stagger da onda de alinhamento
+          f: Math.random() * Math.PI * 2,         // fase do flutuar
+          cobalt: Math.random() < 0.14,
+          a: 0.05 + Math.random() * 0.07
+        });
+      }
+    }
+  }
+
+  var target = 0, p = 0;
+  function progress(){
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - innerHeight;
+    target = max > 0 ? Math.min(scrollY / max, 1) : 0;
+  }
+  function ease(t){ return t < 0 ? 0 : t > 1 ? 1 : 1 - Math.pow(1 - t, 3); }
+
+  var ROT_T = -1.1; // inclinação do acento ´
+  function draw(time){
+    p += (target - p) * 0.07; // suavização premium
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < marks.length; i++) {
+      var m = marks[i];
+      var pi = ease((p - m.d * 0.35) / 0.65);
+      var x = m.sx + (m.gx - m.sx) * pi;
+      var y = m.sy + (m.gy - m.sy) * pi;
+      if (!reduced) { y += Math.sin(time / 2400 + m.f) * (2.5 * (1 - pi * 0.7)); }
+      var rot = m.rot0 + (ROT_T - m.rot0) * pi;
+      var alpha = m.cobalt ? (0.14 + 0.14 * pi) : (m.a + 0.04 * pi);
+      ctx.strokeStyle = 'rgba(' + (m.cobalt ? COBALT : INK) + ',' + alpha + ')';
+      ctx.lineWidth = m.cobalt ? 2.6 : 2;
+      var dx = Math.cos(rot) * m.len / 2, dy = Math.sin(rot) * m.len / 2;
+      ctx.beginPath();
+      ctx.moveTo(x - dx, y - dy);
+      ctx.lineTo(x + dx, y + dy);
+      ctx.stroke();
+    }
+    if (!reduced) requestAnimationFrame(draw);
+  }
+
+  build(); progress();
+  addEventListener('scroll', progress, { passive: true });
+  addEventListener('resize', function(){ build(); progress(); }, { passive: true });
+  if (reduced) { p = target; draw(0); addEventListener('scroll', function(){ p = target; draw(0); }, { passive: true }); }
+  else requestAnimationFrame(draw);
 })();
 </script>
 
