@@ -152,6 +152,14 @@
   .step .price { font-family: 'JetBrains Mono', monospace; font-size: .8rem; font-weight: 600; color: var(--cobalt); font-variant-numeric: tabular-nums; }
   .step p { font-size: .95rem; color: var(--muted); margin: .2rem 0 0; }
 
+  /* GAP DE MERCADO */
+  #gap .step .num { min-width: 4.4rem; white-space: nowrap; }
+  #gap .step h3 { margin-bottom: .25rem; }
+  @media (max-width: 480px) {
+    #gap .step { flex-direction: column; gap: .4rem; }
+    #gap .step .num { padding-top: 0; }
+  }
+
   /* PROVA */
   .proofgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .8rem; margin: 1.3rem 0; }
   .proofgrid .p { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: .9rem 1rem; }
@@ -215,7 +223,35 @@ body > .wrap { position: relative; z-index: 1; }
   <h2>O problema não é falta de IA. É excesso de IA desconectada.</h2>
   <p>Nos últimos três anos, sua empresa assinou ferramentas, rodou pilotos, fez workshop. Os modelos ficaram absurdamente bons — e o resultado não apareceu no caixa. Não por falta de tecnologia: por falta de síntese. Cada ferramenta numa ilha, cada piloto sem dono, nenhum número cobrado.</p>
   <p class="pull">Todo mundo tem os ingredientes. Quase ninguém tem a <em>síntese</em>.</p>
-  <p>O gargalo mudou de lugar. A pergunta deixou de ser "qual IA usar" e virou <strong>"quem faz isso funcionar na minha operação"</strong>. No mundo inteiro, as empresas que capturam valor têm uma coisa em comum: alguém entrou no fluxo de trabalho real, redesenhou o processo e ficou responsável pelo resultado.</p>
+</section>
+
+<section class="block" id="gap">
+  <span class="label">O gap de mercado</span>
+  <h2>Por que as pessoas não conseguem resultado com IA</h2>
+  <p>Não falta tecnologia, orçamento nem vontade. Em toda operação que a gente abre, encontramos as mesmas <strong>três lacunas</strong> entre a ferramenta que a empresa contratou e o número no fim do mês.</p>
+  <div class="step">
+    <span class="num">GAP 01</span>
+    <div>
+      <h3>Os dados não conversam</h3>
+      <p>A IA só é tão boa quanto o que ela enxerga — e na maioria das empresas ela não enxerga quase nada. A venda está na loja, o cliente no CRM, o gasto no gerenciador de anúncios, o custo no ERP, e nada disso se fala. Pergunta específica, resposta genérica: não porque o modelo é fraco, mas porque está operando no escuro. <strong>Sem base de dados única, não existe resposta específica.</strong></p>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">GAP 02</span>
+    <div>
+      <h3>São aplicações isoladas, não loops completos</h3>
+      <p>Usar IA para escrever um e-mail economiza vinte minutos de alguém. Fechar o loop — pesquisa com o cliente → gancho → criativo → campanha → venda → o que a venda ensina de volta — muda o número. A empresa média tem dezenas de usos soltos e nenhum ciclo que se fecha. <strong>Aplicação isolada devolve produtividade individual; só o loop fechado aparece no caixa.</strong></p>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">GAP 03</span>
+    <div>
+      <h3>Usa-se uma fração da capacidade</h3>
+      <p>Os modelos de hoje operam ferramentas, leem bases inteiras, executam tarefas de ponta a ponta e aprendem com o histórico da operação. A maior parte das empresas usa isso como uma caixa de texto que escreve mais rápido — <strong>compraram um motor e estão usando como lanterna</strong> — e depois concluem que "IA não funciona aqui".</p>
+    </div>
+  </div>
+  <p class="pull" style="margin-top:2rem">A era da IA mudou tudo. Quase toda empresa ainda opera com o <em>manual da era anterior</em>.</p>
+  <p>Por isso o gargalo mudou de lugar: a pergunta deixou de ser "qual IA usar" e virou <strong>"quem faz isso funcionar na minha operação"</strong>. No mundo inteiro, as empresas que capturam valor têm uma coisa em comum — alguém entrou no fluxo de trabalho real, conectou os dados, fechou os loops e ficou responsável pelo resultado. Fechar os três gaps não é comprar mais uma ferramenta: é construir um sistema.</p>
 </section>
 
 <section class="block">
