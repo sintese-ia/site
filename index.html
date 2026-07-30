@@ -160,69 +160,6 @@
     #gap .step .num { padding-top: 0; }
   }
 
-  /* LANDING DE CONVERSÃO — componentes */
-  .microcopy {
-    font-family: 'JetBrains Mono', monospace; font-size: .62rem; letter-spacing: .07em;
-    text-transform: uppercase; color: var(--muted); line-height: 1.7; margin: 1.2rem 0 0;
-  }
-  .sublabel {
-    font-family: 'JetBrains Mono', monospace; font-size: .64rem; letter-spacing: .15em;
-    text-transform: uppercase; color: var(--cobalt); font-weight: 600;
-    margin: 2.2rem 0 .2rem; padding-bottom: .6rem; border-bottom: 1px solid var(--line);
-  }
-  .fineprint { font-size: .88rem; color: var(--muted); margin-top: 1.1rem; }
-  .band.tight { margin: 2.2rem 0 0; }
-  section.block > .btn { margin-top: 1.8rem; }
-
-  /* DOR — sintomas */
-  .sym { border-left: 2px solid var(--line); padding: .1rem 0 .1rem 1.4rem; margin: 1.8rem 0; }
-  .sym .q {
-    display: block; font-family: 'Raleway', system-ui, sans-serif;
-    font-size: 1.16rem; font-weight: 600; letter-spacing: -.01em; color: var(--cobalt);
-    margin-bottom: .55rem; text-wrap: balance;
-  }
-  .sym h3 { margin-bottom: .35rem; }
-  .sym p { font-size: .95rem; color: var(--muted); margin: 0; }
-
-  /* SOLUÇÃO — antes/depois */
-  .ba { display: grid; grid-template-columns: 1fr auto 1fr; margin: .5rem 0; }
-  .ba .side { background: var(--card); border: 1px solid var(--line); padding: .9rem 1.05rem; }
-  .ba .side:first-child { border-radius: 4px 0 0 4px; border-right: 0; }
-  .ba .side:last-child { border-radius: 0 4px 4px 0; border-left: 0; border-color: var(--cobalt); }
-  .ba .mid {
-    display: flex; align-items: center; padding: 0 .75rem; background: var(--card);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    color: var(--cobalt); font-family: 'JetBrains Mono', monospace; font-size: .8rem;
-  }
-  .ba .t { display: block; font-family: 'JetBrains Mono', monospace; font-size: .55rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
-  .ba .side:last-child .t { color: var(--cobalt); }
-  .ba .side p { font-size: .89rem; margin: 0; color: var(--muted); }
-  .ba .side:last-child p { color: var(--ink); }
-  @media (max-width: 620px) {
-    .ba { grid-template-columns: 1fr; }
-    .ba .side:first-child { border-radius: 4px 4px 0 0; border-right: 1px solid var(--line); border-bottom: 0; }
-    .ba .side:last-child { border-radius: 0 0 4px 4px; border-left: 1px solid var(--cobalt); border-top: 0; }
-    .ba .mid { justify-content: center; border-left: 1px solid var(--line); border-right: 1px solid var(--line); padding: .15rem 0; }
-    .ba .mid span { transform: rotate(90deg); display: inline-block; }
-  }
-
-  /* TIPOS DE PROJETO */
-  .tipos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 1.3rem 0 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-  .tipos > div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.05rem 1.1rem 1.2rem; }
-  .tipos b { display: block; font-family: 'Raleway', system-ui, sans-serif; font-size: 1.05rem; font-weight: 650; letter-spacing: -.005em; color: var(--ink); margin-bottom: .45rem; }
-  .tipos p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.55; }
-  @media (max-width: 720px) { .tipos { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 430px) { .tipos { grid-template-columns: 1fr; } }
-
-  /* OS QUATRO ATOS */
-  .atos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 1.5rem 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-  .atos > div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.05rem 1rem 1.2rem; }
-  .atos .ord { font-family: 'JetBrains Mono', monospace; font-size: .56rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .65rem; }
-  .atos b { display: block; font-family: 'Raleway', system-ui, sans-serif; font-size: 1.15rem; font-weight: 650; letter-spacing: -.005em; color: var(--ink); line-height: 1.1; }
-  .atos p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.55; }
-  @media (max-width: 700px) { .atos { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 420px) { .atos { grid-template-columns: 1fr; } }
-
   /* PROVA */
   .proofgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .8rem; margin: 1.3rem 0; }
   .proofgrid .p { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: .9rem 1rem; }
@@ -263,172 +200,132 @@ body > .wrap { position: relative; z-index: 1; }
 
 <nav class="top">
   <a class="wm" href="#">S<span class="a">í</span>ntese<small>IA</small></a>
-  <a class="navlink" href="#contato">Falar com o fundador</a>
+  <a class="navlink" href="#fundadora">Turma fundadora</a>
 </nav>
 
-<!-- ═══ 1. HEADLINE ═══ -->
 <header class="hero">
   <span class="label">Implementadora de IA · Middle market</span>
   <h1>IA que paga a <em>própria conta.</em></h1>
-  <p class="sub">Sua empresa já comprou IA e o número não mexeu. <strong>A gente entra na sua operação, constrói o sistema que amarra processos, dados e IA, e coloca em produção em 90 dias.</strong> Parte da nossa remuneração depende da meta que a gente acordar.</p>
-  <a class="btn" href="#contato">Quero o diagnóstico</a><a class="btn ghost" href="#passos">Como funciona</a>
-  <p class="microcopy">Diagnóstico em 1–2 semanas · 100% abatido se avançarmos · se o número não fechar, a gente mesmo te diz</p>
+  <p class="sub">Toda empresa já comprou IA. Quase nenhuma viu resultado no caixa — porque ferramenta sem implementação é custo. <strong>A Síntese entra na sua operação, constrói o sistema que amarra processos, dados e IA, e coloca em produção em 90 dias.</strong> Parte da nossa remuneração depende da meta acordada.</p>
+  <a class="btn" href="#fundadora">Quero uma vaga na turma fundadora</a><a class="btn ghost" href="#como">Como funciona</a>
 </header>
 
 <div class="band">
   <div class="row">
     <div><b>95%</b><span>dos pilotos de IA sem impacto no resultado — MIT, 2025</span></div>
+    <div><b>82% → 23%</b><span>grandes empresas BR que liberam IA vs. que escalam — Deloitte, 2026</span></div>
     <div><b>90 dias</b><span>do escopo ao sistema rodando em produção</span></div>
-    <div><b>0</b><span>pilotos, POCs e protótipos no caminho</span></div>
   </div>
 </div>
 
-<!-- ═══ 2. DOR ═══ -->
-<section class="block" id="dor">
-  <span class="label">A dor</span>
-  <h2>Se você já gastou com IA e o resultado não apareceu, é por um destes três motivos.</h2>
-  <p><strong>O motivo não é o modelo.</strong> O modelo já é bom demais para ser o gargalo. Em toda operação que a gente abre, encontramos as mesmas três lacunas entre a ferramenta que a empresa contratou e o número no fim do mês.</p>
-
-  <div class="sym">
-    <span class="q">"Peço uma análise e volta o óbvio."</span>
-    <h3>Os seus dados não conversam</h3>
-    <p>A venda está na loja, o cliente no CRM, o gasto no gerenciador de anúncios, o custo no ERP. A IA responde genérico porque enxerga um pedaço do quadro. Não é modelo fraco: é modelo operando no escuro. <strong>Sem base de dados única não existe resposta específica.</strong></p>
-  </div>
-
-  <div class="sym">
-    <span class="q">"Todo mundo aqui usa IA e nada aparece no caixa."</span>
-    <h3>São aplicações isoladas, nenhum ciclo se fecha</h3>
-    <p>Usar IA para escrever um e-mail economiza vinte minutos de alguém. Fechar o loop — pesquisa com o cliente → gancho → criativo → campanha → venda → o que a venda ensina de volta — muda o número. <strong>Aplicação isolada devolve produtividade individual; só o loop fechado aparece no resultado.</strong></p>
-  </div>
-
-  <div class="sym">
-    <span class="q">"A minha IA escreve, mas não faz."</span>
-    <h3>Você usa uma fração da capacidade</h3>
-    <p>Os modelos de hoje operam ferramentas com credencial própria, leem bases inteiras, executam de ponta a ponta e aprendem com o histórico. A maior parte das empresas usa isso como caixa de texto que escreve mais rápido — <strong>compraram um motor e estão usando como lanterna</strong> — e depois concluem que "IA não funciona aqui".</p>
-  </div>
-
-  <p class="pull">A era da IA mudou tudo. Quase toda empresa ainda opera com o <em>manual da era anterior</em>.</p>
+<section class="block">
+  <span class="label">O problema</span>
+  <h2>O problema não é falta de IA. É excesso de IA desconectada.</h2>
+  <p>Nos últimos três anos, sua empresa assinou ferramentas, rodou pilotos, fez workshop. Os modelos ficaram absurdamente bons — e o resultado não apareceu no caixa. Não por falta de tecnologia: por falta de síntese. Cada ferramenta numa ilha, cada piloto sem dono, nenhum número cobrado.</p>
+  <p class="pull">Todo mundo tem os ingredientes. Quase ninguém tem a <em>síntese</em>.</p>
 </section>
 
-<!-- ═══ 3. SOLUÇÃO ═══ -->
-<section class="block" id="solucao">
-  <span class="label">A solução</span>
+<section class="block" id="gap">
+  <span class="label">O gap de mercado</span>
+  <h2>Por que as pessoas não conseguem resultado com IA</h2>
+  <p><strong>O motivo não é o modelo.</strong> O modelo já é bom demais para ser o gargalo — e também não falta orçamento nem vontade. Em toda operação que a gente abre, encontramos as mesmas <strong>três lacunas</strong> entre a ferramenta que a empresa contratou e o número no fim do mês. Nenhuma delas se resolve comprando outra ferramenta.</p>
+  <div class="step">
+    <span class="num">GAP 01</span>
+    <div>
+      <h3>Os dados não conversam</h3>
+      <p>A IA só é tão boa quanto o que ela enxerga — e na maioria das empresas ela não enxerga quase nada. A venda está na loja, o cliente no CRM, o gasto no gerenciador de anúncios, o custo no ERP, e nada disso se fala. Pergunta específica, resposta genérica: não porque o modelo é fraco, mas porque está operando no escuro. <strong>Sem base de dados única, não existe resposta específica.</strong></p>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">GAP 02</span>
+    <div>
+      <h3>São aplicações isoladas, não loops completos</h3>
+      <p>Usar IA para escrever um e-mail economiza vinte minutos de alguém. Fechar o loop — pesquisa com o cliente → gancho → criativo → campanha → venda → o que a venda ensina de volta — muda o número. A empresa média tem dezenas de usos soltos e nenhum ciclo que se fecha. <strong>Aplicação isolada devolve produtividade individual; só o loop fechado aparece no caixa.</strong></p>
+    </div>
+  </div>
+  <div class="step">
+    <span class="num">GAP 03</span>
+    <div>
+      <h3>Usa-se uma fração da capacidade</h3>
+      <p>Os modelos de hoje operam ferramentas, leem bases inteiras, executam tarefas de ponta a ponta e aprendem com o histórico da operação. A maior parte das empresas usa isso como uma caixa de texto que escreve mais rápido — <strong>compraram um motor e estão usando como lanterna</strong> — e depois concluem que "IA não funciona aqui".</p>
+    </div>
+  </div>
+  <p class="pull" style="margin-top:2rem">A era da IA mudou tudo. Quase toda empresa ainda opera com o <em>manual da era anterior</em>.</p>
+  <p>Por isso o gargalo mudou de lugar: a pergunta deixou de ser "qual IA usar" e virou <strong>"quem faz isso funcionar na minha operação"</strong>. No mundo inteiro, as empresas que capturam valor têm uma coisa em comum — alguém entrou no fluxo de trabalho real, conectou os dados, fechou os loops e ficou responsável pelo resultado. Fechar os três gaps não é comprar mais uma ferramenta: é construir um sistema.</p>
+</section>
+
+<section class="block">
+  <span class="label">O que fazemos</span>
   <h2>Não somos consultoria. Somos implementadora.</h2>
   <p>Consultoria diagnostica e recomenda. Agência executa tarefas. <strong>Implementadora entra na operação, constrói o sistema, coloca em produção e responde pelo resultado.</strong> Consultoria termina num plano; a gente termina num sistema rodando e num número melhor.</p>
-
-  <p class="sublabel">Como o sistema se constrói — quatro movimentos, nesta ordem</p>
-  <div class="atos">
-    <div><span class="ord">01</span><b>Reduzir</b><p>De tudo o que se acumulou, sobra o que paga a conta. Uma frente escolhida, não uma lista de cem oportunidades.</p></div>
-    <div><span class="ord">02</span><b>Organizar</b><p>Contexto e dados passam a ter um lugar só, com nome e dono. Some a pergunta "qual número é o certo".</p></div>
-    <div><span class="ord">03</span><b>Conectar</b><p>As partes conversam e o ciclo se fecha em si mesmo, em vez de morrer em usos isolados.</p></div>
-    <div><span class="ord">04</span><b>Codificar</b><p>O que funcionou vira sistema e volta a acontecer sozinho, sem depender de alguém lembrar.</p></div>
+  <div class="grid3">
+    <div class="cardx">
+      <span class="n">PILAR 1</span>
+      <h3>Foco em resultado</h3>
+      <p>Produção ou nada. Ou o sistema está rodando na operação de verdade, ou o trabalho não terminou. Anti-piloto, anti-slide, anti-POC.</p>
+    </div>
+    <div class="cardx">
+      <span class="n">PILAR 2</span>
+      <h3>O número é o juiz</h3>
+      <p>Todo projeto começa definindo o número que vai melhorar e termina com ele medido. Falamos a língua do caixa, nunca a da tecnologia.</p>
+    </div>
+    <div class="cardx">
+      <span class="n">PILAR 3</span>
+      <h3>Skin in the game</h3>
+      <p>Parte da remuneração é atrelada à meta acordada em contrato. Ganhamos quando o seu número melhora.</p>
+    </div>
   </div>
-  <p class="fineprint">A ordem não é enfeite: quase todo projeto de IA começa pelo último movimento, automatizando algo que nunca foi reduzido nem organizado. Automatizar bagunça produz bagunça mais rápido — e é ali que morrem os 95%.</p>
-
-  <p class="sublabel">O que muda na sua empresa</p>
-  <div class="ba">
-    <div class="side"><span class="t">Hoje</span><p>Pergunta simples custa dois dias e três pessoas exportando planilha. Quando a resposta chega, a decisão já passou.</p></div>
-    <div class="mid"><span>→</span></div>
-    <div class="side"><span class="t">Depois</span><p>A resposta sai na hora, da base única, com fonte e data. Acaba a discussão sobre qual número é o certo.</p></div>
-  </div>
-  <div class="ba">
-    <div class="side"><span class="t">Hoje</span><p>Cada execução custa uma pessoa-hora. Dobrar a produção significa dobrar o time — ou aceitar que não vai dobrar.</p></div>
-    <div class="mid"><span>→</span></div>
-    <div class="side"><span class="t">Depois</span><p>O ciclo roda sozinho. Mais volume não pede mais gente: pede mais uma execução de um sistema que já existe.</p></div>
-  </div>
-  <div class="ba">
-    <div class="side"><span class="t">Hoje</span><p>O conhecimento está na cabeça de quem faz. Quem sai leva; quem entra recomeça; o mesmo erro volta todo trimestre.</p></div>
-    <div class="mid"><span>→</span></div>
-    <div class="side"><span class="t">Depois</span><p>O que se aprendeu fica escrito no sistema e vale para todas as execuções seguintes. Erro corrigido não volta.</p></div>
-  </div>
-  <p class="pull">A empresa para de crescer <em>somando pessoas</em> e passa a crescer <em>somando sistema</em>.</p>
-  <a class="btn" href="#contato">Quero o diagnóstico</a>
 </section>
 
-<!-- ═══ 4. CREDENCIAIS ═══ -->
-<section class="block" id="credenciais">
-  <span class="label">Credenciais</span>
-  <h2>Quem vai construir na sua casa já construiu na própria.</h2>
-  <p>O fundador da Síntese opera uma marca de consumo inteira — loja, mídia, e-mail, WhatsApp, assinaturas, fiscal, estoque, B2B e relatórios — <strong>com uma pessoa e um sistema</strong>. Os sistemas que implantamos nos clientes rodam primeiro lá, com dinheiro real em jogo todo dia. Não é uma tese sobre IA: é a folha de pagamento dele.</p>
-  <div class="proofgrid">
-    <div class="p"><b>1</b><span>pessoa operando a marca inteira</span></div>
-    <div class="p"><b>13</b><span>rotinas rodando 24/7, sem ninguém acordado</span></div>
-    <div class="p"><b>12+</b><span>ferramentas operadas por API, não só consultadas</span></div>
-    <div class="p"><b>0</b><span>pilotos: tudo o que está de pé está em produção</span></div>
-  </div>
-  <p>Por isso a primeira conversa não é apresentação: é <strong>demonstração com a tela aberta</strong>. Você pergunta, a gente abre a fonte na hora.</p>
-</section>
-
-<!-- ═══ 5. FILOSOFIA ═══ -->
-<section class="block" id="filosofia">
-  <span class="label">Por que a gente se chama Síntese</span>
-  <h2>Crescer, do jeito que a gente aprendeu a crescer, custa a visão do todo.</h2>
-  <p>Numa empresa de três pessoas o dono sabe tudo: o custo, o cliente que reclamou na quinta, o fornecedor que atrasou e o que aquilo vai fazer com a margem de março. Ele não tem relatório nenhum — tem o todo na cabeça, e é isso que faz empresa pequena ser rápida. Com trinta ele já não sabe. Com trezentas, ninguém sabe.</p>
-  <p>Daí a troca que virou lei: <strong>escala ou clareza</strong>. Só que nunca foi lei da natureza — era limite de órgão. Não existia nada capaz de segurar uma empresa inteira ao mesmo tempo, então o todo foi terceirizado para reuniões. ERP, BI, dashboard, comitê, consultoria: todas as tentativas quiseram produzir síntese com instrumentos de análise, e somar pedaços não devolve o todo, devolve pilha. É por isso que o oposto de síntese não é ignorância — <strong>é acúmulo</strong>.</p>
-  <p class="pull">A IA é a primeira coisa capaz de segurar o todo e <em>agir</em> sobre ele. Não por ser inteligente: por não ter departamento, não se especializar e não esquecer.</p>
-  <p><strong>A Síntese existe para desfazer essa troca</strong> — para devolver a uma empresa a capacidade de se ver inteira e agir como uma coisa só, no tamanho em que ela está hoje. O nome não é decoração: é o serviço, descrito.</p>
-</section>
-
-<!-- ═══ 6. PASSOS E TIPOS DE PROJETO ═══ -->
-<section class="block" id="passos">
-  <span class="label">Os passos</span>
+<section class="block" id="como">
+  <span class="label">Como funciona</span>
   <h2>Três degraus. Cada um paga o próximo.</h2>
   <div class="step">
     <span class="num">01</span>
     <div>
       <h3>Diagnóstico <span class="price">1–2 SEMANAS · R$ 12.000</span></h3>
-      <p>Entramos na sua operação e mapeamos os macroprocessos: onde passa dinheiro, onde o dado existe, onde o ciclo trava. Você sai com o mapa, o business case por frente, o número-alvo e o baseline medido — e o valor é <strong>100% abatido</strong> se avançarmos. Serve mesmo que você não siga com a gente.</p>
+      <p>Entramos na sua operação e mapeamos onde a IA paga a conta: os fluxos de maior valor, o número-alvo de cada um e o business case. Você sai com um plano executável — e o valor é 100% abatido se avançarmos para a implantação.</p>
     </div>
   </div>
   <div class="step">
     <span class="num">02</span>
     <div>
-      <h3>Implementação full <span class="price">90 DIAS · VALOR FIXO</span></h3>
-      <p>Uma frente escolhida, levada até o fim: dados conectados, processo redesenhado, IA operando as ferramentas, governança escrita, time treinado, número medido. <strong>Garantia de risco reverso — se ao fim dos 90 dias o sistema não estiver rodando, você não paga a última parcela.</strong></p>
+      <h3>Implantação <span class="price">90 DIAS · R$ 60.000 FIXO</span></h3>
+      <p>Construímos o sistema e colocamos em produção: dados conectados, workflow redesenhado, time treinado, número medido. Garantia de risco reverso: se ao fim dos 90 dias o sistema não estiver rodando, você não paga a última parcela.</p>
     </div>
   </div>
   <div class="step">
     <span class="num">03</span>
     <div>
-      <h3>Operação + success fee <span class="price">MENSAL + VARIÁVEL POR META</span></h3>
-      <p>O motor não para: otimização contínua, novas frentes, reunião mensal de decisão. O variável é atrelado à meta em contrato — só amarramos a número que os dois lados leem na mesma fonte, com baseline registrado antes de começar. Ciclos de 90 dias, sem fidelidade longa.</p>
+      <h3>Operação contínua <span class="price">R$ 7.500/MÊS + VARIÁVEL POR META</span></h3>
+      <p>O motor não para: otimização contínua, novos fluxos, relatório mensal de decisão. O variável é atrelado à meta em contrato — skin in the game de verdade. Ciclos de 90 dias, sem fidelidade longa: o resultado renova o contrato.</p>
     </div>
   </div>
-
-  <div class="band tight">
-    <div class="row">
-      <div><b>2 sem.</b><span>o mapa, o business case e o baseline na sua mão</span></div>
-      <div><b>60 dias</b><span>o sistema rodando na operação real</span></div>
-      <div><b>90 dias</b><span>loop fechado, seu time operando, medidor no ar</span></div>
-    </div>
-  </div>
-
-  <p class="sublabel" style="margin-top:2.6rem">Tipos de projeto — onde a primeira batalha costuma estar</p>
-  <div class="tipos">
-    <div><b>Demanda</b><p>Pesquisa com cliente real, inteligência sobre os anúncios do nicho e produção criativa conectadas ao dado de venda. O custo de aquisição para de ser achismo.</p></div>
-    <div><b>Conversão</b><p>Site, checkout, página de produto ou proposta comercial reconstruídos a partir de onde o cliente desiste — medido, não opinado.</p></div>
-    <div><b>Relação</b><p>Réguas de e-mail e WhatsApp disparadas por evento da operação, segmentação por comportamento real de compra, recorrência trabalhada como sistema.</p></div>
-    <div><b>Entrega</b><p>O processo que entrega o seu produto ou serviço: onde ele trava, onde depende de alguém lembrar, onde a IA assume de ponta a ponta.</p></div>
-    <div><b>Back-office</b><p>Fiscal, financeiro, compras e estoque. Chato, invisível e caro — é onde mora a margem que ninguém está olhando.</p></div>
-    <div><b>Gestão</b><p>Base de dados única e relatórios de decisão que saem sozinhos: diário, semanal de priorização, mensal financeiro.</p></div>
-  </div>
-  <p class="fineprint">Uma frente por vez, sempre. A segunda batalha começa quando a primeira já se pagou.</p>
 </section>
 
-<!-- ═══ 7. CTA ═══ -->
-<section class="block" id="contato">
+<section class="block">
+  <span class="label">A prova</span>
+  <h2>Somos operadores. A demonstração é ao vivo.</h2>
+  <p>O fundador da Síntese opera uma marca própria de consumo — e os sistemas que implementamos nos clientes rodam primeiro nela, com dinheiro real em jogo todos os dias. Por isso a primeira conversa não é apresentação: é <strong>demonstração com a tela aberta</strong> — o sistema rodando, na frente de quem pergunta.</p>
+  <div class="proofgrid">
+    <div class="p"><b>1</b><span>pessoa operando a marca inteira</span></div>
+    <div class="p"><b>13</b><span>rotinas rodando 24/7, sem ninguém acordado</span></div>
+    <div class="p"><b>0</b><span>pilotos: tudo o que está de pé está em produção</span></div>
+  </div>
+  <p style="font-size:.9rem; color: var(--muted)">Loja, mídia, e-mail, WhatsApp, assinaturas, fiscal, estoque e relatórios — uma pessoa e um sistema. Os números da operação a gente abre na conversa, não na vitrine.</p>
+</section>
+
+<section class="block" id="fundadora">
   <div class="cta">
-    <span class="label">Turma fundadora · 3 vagas</span>
-    <h2>Trinta minutos com a tela aberta.</h2>
-    <p>Você traz o processo que mais dói. A gente abre o sistema rodando, mostra como essa arquitetura endereça o seu caso e diz honestamente se dá ou não dá.</p>
+    <span class="label">Turma fundadora</span>
+    <h2>3 empresas. Condição de fundação.</h2>
+    <p>Estamos abrindo o método para as <strong>3 primeiras empresas</strong> fora da nossa operação, com condição de fundação: <strong>implantação por R$ 45.000</strong> (25% abaixo da tabela) em troca de case aberto, com números publicados.</p>
     <ul>
-      <li><strong>Condição de fundação:</strong> as 3 primeiras empresas fora da nossa operação têm 25% de desconto na implementação, em troca de case aberto com números publicados.</li>
       <li><strong>Perfil:</strong> empresa de R$ 5–100 mi de faturamento, com fundador ou dono envolvido na operação.</li>
-      <li><strong>Honestidade de entrada:</strong> se no diagnóstico o número não fechar, a gente mesmo te diz que não faz sentido — e você fica com o mapa.</li>
+      <li><strong>Por onde começamos:</strong> marcas de consumo e e-commerce — o terreno onde operamos todos os dias — expandindo para outros setores do middle market.</li>
+      <li><strong>Honestidade de entrada:</strong> se no diagnóstico o número não fechar, a gente mesmo te diz que não faz sentido.</li>
     </ul>
-    <!-- TODO destino do CTA: substituir "#" por wa.me/55… , mailto: ou link de agenda -->
     <a class="btn" href="#">Falar com o fundador</a>
-    <p class="microcopy" style="margin-top:1.1rem">Sem apresentação de slides. Sem proposta de 40 páginas. Uma conversa e uma tela.</p>
   </div>
 </section>
 
