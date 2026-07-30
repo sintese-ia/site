@@ -160,6 +160,16 @@
     #gap .step .num { padding-top: 0; }
   }
 
+  /* OS QUATRO ATOS */
+  .atos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 1.5rem 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .atos > div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.05rem 1rem 1.2rem; }
+  .atos .ord { font-family: 'JetBrains Mono', monospace; font-size: .56rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: .65rem; }
+  .atos b { display: block; font-family: 'Raleway', system-ui, sans-serif; font-size: 1.15rem; font-weight: 650; letter-spacing: -.005em; color: var(--ink); line-height: 1.1; }
+  .atos .vs { display: block; margin: .35rem 0 .65rem; font-family: 'JetBrains Mono', monospace; font-size: .57rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cobalt); }
+  .atos p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.55; }
+  @media (max-width: 700px) { .atos { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) { .atos { grid-template-columns: 1fr; } }
+
   /* PROVA */
   .proofgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .8rem; margin: 1.3rem 0; }
   .proofgrid .p { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: .9rem 1rem; }
@@ -252,6 +262,20 @@ body > .wrap { position: relative; z-index: 1; }
   </div>
   <p class="pull" style="margin-top:2rem">A era da IA mudou tudo. Quase toda empresa ainda opera com o <em>manual da era anterior</em>.</p>
   <p>Por isso o gargalo mudou de lugar: a pergunta deixou de ser "qual IA usar" e virou <strong>"quem faz isso funcionar na minha operação"</strong>. No mundo inteiro, as empresas que capturam valor têm uma coisa em comum — alguém entrou no fluxo de trabalho real, conectou os dados, fechou os loops e ficou responsável pelo resultado. Fechar os três gaps não é comprar mais uma ferramenta: é construir um sistema.</p>
+</section>
+
+<section class="block" id="atos">
+  <span class="label">O que a palavra quer dizer</span>
+  <h2>Síntese não é o nome da empresa. É a descrição do serviço.</h2>
+  <p>Sintetizar é um verbo com quatro atos. Cada um existe contra um inimigo exato — e o inimigo-mãe é o <strong>acúmulo</strong>: mais uma ferramenta, mais um piloto, mais um dashboard.</p>
+  <div class="atos">
+    <div><span class="ord">Ato 1</span><b>Reduzir</b><span class="vs">contra acumular</span><p>De tudo que existe na operação, sobra o que paga a conta. Uma batalha, não cinco frentes.</p></div>
+    <div><span class="ord">Ato 2</span><b>Organizar</b><span class="vs">contra espalhar</span><p>Cada coisa com lugar, nome e dono. O contexto do negócio e os dados num só lugar.</p></div>
+    <div><span class="ord">Ato 3</span><b>Conectar</b><span class="vs">contra isolar</span><p>As partes passam a conversar. O ciclo se fecha em vez de morrer em usos soltos.</p></div>
+    <div><span class="ord">Ato 4</span><b>Codificar</b><span class="vs">contra esquecer</span><p>O que funcionou vira sistema e se repete sozinho. Erro corrigido não volta.</p></div>
+  </div>
+  <p class="pull">Nessa ordem. <em>Sempre.</em></p>
+  <p>É aqui que mora a explicação dos 95%: quase todo projeto de IA começa pelo fim — <strong>codificando</strong> o que nunca foi reduzido nem organizado. Automatizar bagunça produz bagunça mais rápido. Os três gaps acima são exatamente os atos 2, 3 e 4 faltando.</p>
 </section>
 
 <section class="block">
